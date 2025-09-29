@@ -17,8 +17,8 @@
     <n-flex :size="4" class="text" align="center" vertical>
       <n-p depth="3">
         Copyright &copy; 2023 - {{ new Date().getFullYear() }}
-        <n-text depth="3" @click="jumpLink('https://blog.halfair.top')">
-          半团空气
+        <n-text depth="3" @click="jumpLink('https://halfair.top')">
+          HalfAir
         </n-text>
         | Powered by SiteStatus
       </n-p>
