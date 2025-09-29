@@ -88,6 +88,13 @@ export default defineEventHandler(async (event): Promise<MonitorsResult> => {
     });
     // 处理数据
     const data = formatSiteData(result, dates);
+    //  清理掉 URL，避免前端显示真实网址
+    if (data?.data) {
+      data.data = data.data.map((site) => ({
+        ...site,
+        url: "", // 直接置空
+      }));
+    }
     // 缓存数据
     setCache(cacheKey, data, 1000 * 60);
     return {
